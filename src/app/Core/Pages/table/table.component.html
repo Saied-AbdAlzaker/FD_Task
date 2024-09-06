@@ -1,0 +1,67 @@
+<section class="card my-3 p-3">
+    <div class="d-flex justify-content-between">
+        <div class="d-flex">
+            <h6>{{'table.Sales'|translate}}</h6>
+            <div class="p-toolbar-group-center">
+                <span class="p-input-icon-left mx-2">
+                    <i class="pi pi-search" [class]="_helperService.textDir==='ltr'?'searchItem':''"></i>
+                    <input pInputText placeholder="Search" />
+                </span>
+                <i class="fa-solid fa-sliders mx-3"></i>
+                <i class="fa-solid fa-sort"></i>
+            </div>
+        </div>
+        <div>
+            <div class="d-flex align-items-center">
+                <p-inputSwitch [(ngModel)]="checked" />
+                <p class="mx-3">{{'table.Activated'|translate}}</p>
+                <p-button label="{{'table.Book'|translate}}" severity="help" />
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-3">
+        <p-table [value]="users" [paginator]="true" [rows]="4" [rowsPerPageOptions]="[4, 8, 12]"
+            [tableStyle]="{ 'min-width': '50rem' }" *ngIf="users.length>1;else demo">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>#</th>
+                    <th>{{'table.User'|translate}}</th>
+                    <th>{{'table.TNumber'|translate}}</th>
+                    <th pSortableColumn="Ticket_Rate">
+                        {{'table.TRate'|translate}} <p-sortIcon field="Ticket_Rate" />
+                    </th>
+                    <th>{{'table.Cinemas'|translate}}</th>
+                    <th>{{'table.People'|translate}}</th>
+                    <th>{{'table.Purchases'|translate}}</th>
+                    <th>{{'table.Ticket'|translate}}</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-user |search:searchItem>
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td class="d-flex align-items-center">
+                        <img [src]="user.image" [alt]="user.user" class="mb-3 ms-3">
+                        <div>
+                            <h5>{{ user.user }}</h5>
+                            <p class="text-phone">{{user.phoneNumber}}</p>
+                        </div>
+                    </td>
+                    <td>{{ user.Ticket_number}}</td>
+                    <td>{{ user.Ticket_Rate }}</td>
+                    <td [pTooltip]="user.Cinemas">{{ user.Cinemas.split(' ').slice(0,2).join(' ') }}</td>
+                    <td>{{ user.Number_of_people }}</td>
+                    <td>{{ user.Number_of_purchases }}</td>
+                    <td>
+                        <p-button class="mx-2" (click)="download()"> <i class="fa-solid fa-file mx-3"></i>
+                            {{'table.download'|translate}} <i class="fa-solid fa-download mx-2"></i></p-button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+    <ng-template #demo>
+        <h1 class="text-center">No users Data</h1>
+    </ng-template>
+
+</section>

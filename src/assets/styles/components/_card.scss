@@ -1,0 +1,30 @@
+@import '../abstracts/variables';
+
+
+i{
+    cursor: pointer;
+}
+.brd{
+  border-bottom: 2px dashed #fff;
+  position: relative;
+}
+.brd::after{
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  right: -20px;
+  top: -10px;
+}
+.brd::before{
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: -20px;
+  top: -10px;
+}

@@ -1,0 +1,16 @@
+@import '../abstracts/variables';
+
+
+// Table
+th {
+  color: $sec-color;
+  text-align:center !important;
+}
+
+td{
+  text-align: center !important;
+}
+
+.searchItem{
+  margin-left: 80%;
+}

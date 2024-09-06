@@ -1,0 +1,46 @@
+
+
+{
+    "ticket":"ticket Number #2342",
+    "edit":"Edit",
+    "s":"left",
+    "chart":{
+        "Statistics":"Coupon usage statistics",
+        "Date":"05 Jul 2023 - 05 Aug 2023",
+        "Yearly":"Yearly",
+        "Monthly":"Monthly",
+        "jan":"January ",
+        "feb":"February ",
+        "mar":"March ",
+        "apr":"April ",
+        "may":"May ",
+        "jun":"June ",
+        "jul":"July ",
+        "aug":"August ",
+        "sep":"September ",
+        "oct":"October ",
+        "nov":"November ",
+        "des":"December"
+    },
+    "card":{
+        "Movie":"Movie Ticket Offer",
+        "Valid":"Valid until 15 Jul 2023",
+        "Discount":"25% Discount",
+        "Share":"Share"
+    },
+
+    "table":{
+        "Sales":"Ticket Sales",
+        "Activated":"Activated",
+        "Book":"Book New Ticket",
+        "download":"Download File",
+        "User":"User",
+        "TNumber":"Ticket Number",
+        "TRate":"Ticket Rate",
+        "Cinemas":"Cinemas",
+        "People":"Number of People",
+        "Purchases":"Number of Purchases",
+        "Ticket":"Ticket"
+        
+    }
+}
