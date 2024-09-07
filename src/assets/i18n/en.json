@@ -32,6 +32,7 @@
     "table":{
         "Sales":"Ticket Sales",
         "Activated":"Activated",
+        "NotActivated":"Not Activated",
         "Book":"Book New Ticket",
         "download":"Download File",
         "User":"User",
@@ -42,5 +43,7 @@
         "Purchases":"Number of Purchases",
         "Ticket":"Ticket"
         
-    }
+    },
+
+    "data": ["January" , "February" , "March" , "April" , "May" , "June" , "July" , "August" , "September" , "October" , "November" , "December"]
 }

@@ -15,7 +15,8 @@
         <div>
             <div class="d-flex align-items-center">
                 <p-inputSwitch [(ngModel)]="checked" />
-                <p class="mx-3">{{'table.Activated'|translate}}</p>
+                <p class="mx-3" *ngIf="checked">{{'table.Activated'|translate}}</p>
+                <p class="mx-3" *ngIf="!checked">{{'table.NotActivated'|translate}}</p>
                 <p-button label="{{'table.Book'|translate}}" severity="help" />
             </div>
         </div>

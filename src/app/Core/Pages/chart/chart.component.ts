@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
+import { HelperService } from '../../Services/helper.service';
 
 @Component({
   selector: 'app-chart',
@@ -8,7 +9,13 @@ import * as echarts from 'echarts';
 })
 export class ChartComponent implements OnInit {
 
+  constructor(public _helperService:HelperService){}
+  
   ngOnInit(): void {
+    this.getChart()
+  }
+
+  getChart(){
     var chartDom = document.getElementById('main');
     var myChart = echarts.init(chartDom);
     var option;
