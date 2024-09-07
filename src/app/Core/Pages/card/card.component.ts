@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SafeUrl } from '@angular/platform-browser';
 import { ToastrService } from 'ngx-toastr';
-import { HelperService } from 'src/app/Core/services/helper.service';
+import { HelperService } from '../../Services/helper.service';
 
 @Component({
   selector: 'app-card',

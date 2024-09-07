@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../Services/user.service';
 import { User } from '../../Model/user';
-import { HelperService } from '../../services/helper.service';
+import { HelperService } from '../../Services/helper.service';
 import { FileDownloadService } from '../../Services/file-download.service';
 
 
