@@ -5,7 +5,7 @@
             <div class="p-toolbar-group-center">
                 <span class="p-input-icon-left mx-2">
                     <i class="pi pi-search" [class]="_helperService.textDir==='ltr'?'searchItem':''"></i>
-                    <input pInputText placeholder="Search" />
+                    <input pInputText placeholder="Search" [(ngModel)]="searchText" />
                 </span>
                 <i class="fa-solid fa-sliders mx-3"></i>
                 <i class="fa-solid fa-sort"></i>
@@ -38,7 +38,7 @@
                     <th>{{'table.Ticket'|translate}}</th>
                 </tr>
             </ng-template>
-            <ng-template pTemplate="body" let-user |search:searchItem>
+            <ng-template pTemplate="body" let-user |search:searchText >
                 <tr>
                     <td>{{ user.id }}</td>
                     <td class="d-flex align-items-center">

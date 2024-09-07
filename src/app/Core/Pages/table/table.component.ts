@@ -4,7 +4,6 @@ import { User } from '../../Model/user';
 import { HelperService } from '../../Services/helper.service';
 import { FileDownloadService } from '../../Services/file-download.service';
 
-
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -14,7 +13,7 @@ export class TableComponent implements OnInit {
 
   checked: boolean = true;
   users: User[] = [];
-  searchItem: string = '';
+  searchText: string = '';
 
   constructor(private userService: UserService, public _helperService:HelperService,
     private fileDownloadService: FileDownloadService){}
