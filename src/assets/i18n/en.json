@@ -42,7 +42,6 @@
         "People":"Number of People",
         "Purchases":"Number of Purchases",
         "Ticket":"Ticket"
-        
     },
 
     "data": ["January" , "February" , "March" , "April" , "May" , "June" , "July" , "August" , "September" , "October" , "November" , "December"]

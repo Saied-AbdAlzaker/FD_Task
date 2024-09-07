@@ -3,6 +3,7 @@ import { UserService } from '../../Services/user.service';
 import { User } from '../../Model/user';
 import { HelperService } from '../../Services/helper.service';
 import { FileDownloadService } from '../../Services/file-download.service';
+import { Table } from 'primeng/table';
 
 @Component({
   selector: 'app-table',
@@ -14,13 +15,19 @@ export class TableComponent implements OnInit {
   checked: boolean = true;
   users: User[] = [];
   searchText: string = '';
+  searchValue: string | undefined;
+  loading: boolean = true;
 
-  constructor(private userService: UserService, public _helperService:HelperService,
-    private fileDownloadService: FileDownloadService){}
- 
+  constructor(private userService: UserService, public _helperService: HelperService,
+    private fileDownloadService: FileDownloadService) { }
+
   ngOnInit() {
-    this.users = this.userService.myUsers
+    setTimeout(() => {
+      this.users = this.userService.myUsers;
+      this.loading = false;
+    }, 1000);  
   }
+
 
   download() {
     // const fileUrl = 'https://example.com/file.pdf'; // Replace with the actual file URL
@@ -28,5 +35,6 @@ export class TableComponent implements OnInit {
     const fileName = 'downloadedFile.pdf';
     this.fileDownloadService.downloadFile(fileUrl, fileName);
   }
+
 
 }

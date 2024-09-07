@@ -2,15 +2,23 @@
 
 
 // Table
+.table {
+  margin: 0 auto;
+  width: 100%;
+}
 th {
   color: $sec-color;
   text-align:center !important;
 }
-
 td{
   text-align: center !important;
+  padding: 8px;
 }
-
 .searchItem{
   margin-left: 80%;
 }
+.p-input-icon-left {
+  margin-bottom: 20px;
+}
+
+

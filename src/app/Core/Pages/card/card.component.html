@@ -16,8 +16,8 @@
     <div class="d-flex justify-content-between p-4">
         <div class="d-flex mt-5">
             <h5>{{'card.Discount'|translate}}</h5>
-            <p-button class="mx-2"> {{'card.Share'|translate}} <i
-                    class="fa-solid fa-share-from-square ms-2"></i></p-button>
+            <p-button> {{'card.Share'|translate}} <i
+                    class="fa-solid fa-share-from-square mx-2"></i></p-button>
         </div>
         <div [class]="_helperService.textDir=== 'ltr'? 'ms-5':'me-5'">
             <qrcode [qrdata]="'https://www.linkedin.com/in/saed-abd-%D9%8Felzaker-878349235/'" [width]="100"

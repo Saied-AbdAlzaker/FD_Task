@@ -22,6 +22,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SearchPipe } from './Core/Pipes/search.pipe';
+import { InputTextModule } from 'primeng/inputtext';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -51,6 +52,7 @@ export function createTranslateLoader(http: HttpClient) {
     InputSwitchModule,
     CardModule,
     TableModule,
+    InputTextModule,
     TooltipModule,
     ToolbarModule,
     FileSaverModule,
